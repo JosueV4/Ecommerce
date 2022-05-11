@@ -1,13 +1,75 @@
-h1 {
-    color: #000000;
+
+html {
+    box-sizing: border-box;
 }
 
-h1 span {
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+
+/* Globales */
+
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+.contenedor {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+
+
+/* Header y Navegación */
+.nombre-sitio {
+    text-align: center;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+.nombre-sitio span {
     color: #037bc0;
 }
 
-footer a {
-    text-transform: uppercase;
+
+.contenedor-navegacion {
+    border-top: 1px solid #e1e1e1
+}
+
+.nav-principal {
+    border-top: 1px solid #e1e1e1;
+    padding: 20px 0;
+    display: flex;
 }
 
 
+.hero {
+    background-image: url(../img/principal.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 550px;
+}
+
+
+
+
+/* Box Model */
+
+.sobre-nosotros {
+    background-color: red;
+    width: 200px;
+    padding: 25px;
+    box-sizing: border-box;
+}
+
+.so-nosotros {
+    background-color: blue;
+    width: 400px;
+    padding: 25px;
+    box-sizing: border-box;
+}
+
+
+/* Display inline y block  */

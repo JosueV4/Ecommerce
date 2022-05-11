@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ecommerce  - Home</title>
+    <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/app.css">
 
    
@@ -14,22 +15,26 @@
 <body>
 
 
-
-
+    
     <header>
-        <h1>Tienda <span></> Muebles </span></h1>
+        <h1 class="nombre-sitio">Tienda <span></> Muebles </span></h1>
     </header>
 
+    <div class="contenedor-navegacion">
+        <nav class="nav-principal contenedor">
+            <a href="index.html">Inicio</a>
+            <a href="nosotros.html">Nosotros</a>
+            <a href="tienda.html">Tienda</a>
+            <a href="blog.html">Blog</a>
+            <a href="galeria.html">Galeria</a>
+            <a href="contacto.html">Contacto</a>
+            <a href="contacto.html">Contacto</a>
+        
+        </nav>
+    </div>
 
-    <nav>
-        <a href="index.html">Inicio</a>
-        <a href="nosotros.html">Nosotros</a>
-        <a href="tienda.html">Tienda</a>
-        <a href="blog.html">Blog</a>
-        <a href="galeria.html">Galeria</a>
-        <a href="contacto.html">Contacto</a>
-        <a href="contacto.html">Contacto</a>
-    </nav>
+
+    <div class="hero"></div>
 
 
     <section>
@@ -53,7 +58,7 @@
 
 
 
-<section>
+<section class="sobre-nosotros">
     <div>
         <h2>Sobre Nosotros</h2>
 
@@ -62,7 +67,17 @@
     </div>
 </section>
 
-  
+
+<section class="so-nosotros">
+    <div>
+        <h2>Sobre Nosotros</h2>
+
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit dolores voluptatibus quos eos aut aperiam repellendus iste veniam! Perferendis aliquid accusantium omnis itaque voluptatibus doloribus labore, possimus nesciunt ipsam impedit.</p>
+
+    </div>
+</section>
+
+
 
     <main>
         <h2>Nuestros Productos</h2>
@@ -157,7 +172,7 @@
         <div>
             <h3>Categorias</h3>
 
-            <nav>
+            <nav id="navegacion">
                 <a href="#">Cocina</a>
                 <a href="#">Oficina</a>
                 <a href="#">Jardín</a>
@@ -169,7 +184,7 @@
         <div>
             <h3>Sobre Nosotros</h3>
 
-            <nav>
+            <nav class="navegacion">
                 <a href="#">Nuestra Historia</a>
                 <a href="#">Misión, Visión y Valores</a>
                 <a href="#">Carreras</a>
@@ -181,7 +196,7 @@
         <div>
             <h3>Soporte</h3>
 
-            <nav>
+            <nav id="navegacion">
                 <a href="#">Preguntas Frecuentes</a>
                 <a href="#">Ayuda en Linea</a>
                 <a href="#">Confianza y Seguridad</a>      
