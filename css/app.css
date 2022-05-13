@@ -20,6 +20,10 @@ a {
     margin: 0 auto;
 }
 
+img {
+    max-width: 100%;
+    display: block;
+}
 
 
 /* Header y Navegación */
@@ -42,6 +46,8 @@ a {
     border-top: 1px solid #e1e1e1;
     padding: 20px 0;
     display: flex;
+    flex-direction: row;
+    justify-content: space-between;
 }
 
 
@@ -54,9 +60,32 @@ a {
 
 
 
+/* Categorias */
+.categorias h2 {
+    text-align: center;
+}
+
+.categoria a {
+    text-align: center;
+    display: block;
+    padding: 20px;
+    font-size: 20px;
+}
+.categoria a:hover {
+    background-color: #037bc0;
+    color: #fff;
+    border-bottom-right-radius: 10px;
+
+}
+
+.listado-categorias {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
 
 /* Box Model */
-
 .sobre-nosotros {
     background-color: red;
     width: 200px;
