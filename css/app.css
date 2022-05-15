@@ -1,104 +1,155 @@
 
 html {
-    box-sizing: border-box;
+    box-sizing: border-box; /* evita que los width y padding se salgán del contenido */
+    font-size: 62.5%; /* 1REM = 10px */
 }
-
 *, *:before, *:after {
     box-sizing: inherit;
 }
+body {
+    font-family: 'Raleway', sans-serif;
+    font-size: 1.6rem; /* Agregar a cada proyecto para adaptar todos los textos */
+    line-height: 2; /* Interlineado entre lineas de texto del proyecto *//
+}
+
 
 /* Globales */
-
-
+h1, h2, h3 {
+    font-family: 'Playfair Display', serif;
+    margin: 0 0 5rem 0;  /* remover margenes por default */
+}
+h1 {
+    font-size: 5rem;
+}
+h2 {
+    font-size: 4rem;
+}
+h3 {
+    font-size: 3rem;
+}
 a {
     text-decoration: none;
     color: black;
 }
-
 .contenedor {
-    max-width: 1200px;
+    max-width: 120rem;
     margin: 0 auto;
 }
-
 img {
-    max-width: 100%;
+    max-width: 100%; /* para hacer responsible las imagenes */
     display: block;
+}
+.btn {
+    background-color: #8cbc00;
+    display: block; 
+    color: #fff;
+    text-transform: uppercase;
+    font-weight: 900;
+    padding: 1rem;
+    transition: background-color .3s ease-out;
+}
+.btn:hover {
+    background-color: #769c02;
+}
+
+
+
+/* Utilidades */
+.text-center {
+    text-align: center;
 }
 
 
 /* Header y Navegación */
 .nombre-sitio {
     text-align: center;
-    margin-top: 50px;
-    margin-bottom: 50px;
+    margin-top: 5rem;
 }
-
 .nombre-sitio span {
     color: #037bc0;
 }
-
-
 .contenedor-navegacion {
-    border-top: 1px solid #e1e1e1
+    border-top: .1rem solid #e1e1e1
 }
-
 .nav-principal {
-    border-top: 1px solid #e1e1e1;
-    padding: 20px 0;
+    border-top: .1rem solid #e1e1e1;
+    padding: 2rem 0;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
 }
-
-
 .hero {
-    background-image: url(../img/principal.jpg);
+    background-image: url(../img/principal.jpg); /* insertar imagen desde css */
     background-repeat: no-repeat;
     background-size: cover;
-    height: 550px;
+    background-position: center center;
+    height: 55rem;
 }
-
 
 
 /* Categorias */
+.categorias {
+    padding-top: 5rem;
+}
 .categorias h2 {
     text-align: center;
 }
-
 .categoria a {
     text-align: center;
     display: block;
-    padding: 20px;
-    font-size: 20px;
+    padding: 2rem;
+    font-size: 2rem;
 }
 .categoria a:hover {
     background-color: #037bc0;
     color: #fff;
-    border-bottom-right-radius: 10px;
-
+    border-bottom-right-radius: 1rem;
 }
-
 .listado-categorias {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 20px;
+    gap: 2rem;
 }
 
 
-/* Box Model */
+/* Bloque Nosotros */
 .sobre-nosotros {
-    background-color: red;
-    width: 200px;
-    padding: 25px;
-    box-sizing: border-box;
+        background-image: linear-gradient( to right, transparent 50%, #037bc0 50%, #037bc0 100% ), url(../img/nosotros.jpg);  /* usar degradado de imagen */
+        background-position: left center;
+        padding: 10rem 0; 
+        background-repeat: no-repeat;
+        background-size: 100%, 120rem;
+}
+.sobre-nosotros-grid {
+    display: flex;
+    justify-content: flex-end;
+}
+.texto-nosotros {
+    flex-basis: 50%;
+    padding-left: 10rem;
+    color: #fff;
 }
 
-.so-nosotros {
-    background-color: blue;
-    width: 400px;
-    padding: 25px;
-    box-sizing: border-box;
+
+/* Listado de productos */
+.contenido-principal {
+    padding-top: 5rem;
 }
-
-
-/* Display inline y block  */
+.producto {
+    background-color: #037bc0;
+}
+.texto-producto {
+    text-align: center;
+    color: #fff;
+    padding: 5rem;
+}
+.texto-producto h3 {
+    margin: 0;
+}
+.texto-producto p {
+    margin: 0 0 .5rem 0;
+}
+.texto-producto .precio {
+    font-size: 2.8rem;
+    font-weight: 900;
+}
