@@ -135,6 +135,48 @@ img {
 .contenido-principal {
     padding-top: 5rem;
 }
+.listado-productos { 
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 2rem; /*separacion en las columnas del grid : column-gap y para las filas es: row-gad */  
+}
+.producto:nth-child(1) {                    /* se usa para seleccionar un elemento de un grid */
+    grid-column-start: 1; 
+    grid-column-end: 7;    
+    display: grid;
+    grid-template-columns: 3fr 1fr;               /* se usa para dividir un contenedor en fracciones de imagen y al frente del texto */
+}
+.producto:nth-child(1) img {
+    height: 43rem;
+    width: 100%;
+    object-fit: cover;  /*se usa para posicionar una imagen dentro del contenedor */
+}
+.producto:nth-child(2) {                    /* se usa para seleccionar un elemento de un grid */
+    grid-column-start: 1; 
+    grid-column-end: 4;                        /* para darle la cantidad de columnas a abarcar */
+}  
+.producto:nth-child(2) img,
+.producto:nth-child(3) img{
+    height: 30rem;
+    width: 100%;
+    object-fit: cover;  /*se usa para posicionar una imagen dentro del contenedor */
+}
+.producto:nth-child(3) {                    /* se usa para seleccionar un elemento de un grid */
+    grid-column-start: 4; 
+    grid-column-end: 7;                        /* para darle la cantidad de columnas a abarcar */
+}  
+.producto:nth-child(4) {                    /* se usa para seleccionar un elemento de un grid */
+    grid-column-start: 1; 
+    grid-column-end: 3;                        /* para darle la cantidad de columnas a abarcar */
+}  
+.producto:nth-child(5) {                    /* se usa para seleccionar un elemento de un grid */
+    grid-column-start: 3; 
+    grid-column-end: 5;                        /* para darle la cantidad de columnas a abarcar */
+}  
+.producto:nth-child(6) {                    /* se usa para seleccionar un elemento de un grid */
+    grid-column-start: 5; 
+    grid-column-end: 7;                        /* para darle la cantidad de columnas a abarcar */
+}  
 .producto {
     background-color: #037bc0;
 }
@@ -153,3 +195,32 @@ img {
     font-size: 2.8rem;
     font-weight: 900;
 }
+
+
+/* Footer */
+footer {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+} 
+footer .navegacion {
+    display: flex;
+    flex-direction: column;            /* Alinear Filas y Columnas */ 
+}
+.lista-footer:nth-child(1) {                    /* se usa para seleccionar un elemento de un grid */
+    grid-column-start: 1; 
+    grid-column-end: 2;                        /* para darle la cantidad de columnas a abarcar */
+}  
+.lista-footer:nth-child(2) {                    /* se usa para seleccionar un elemento de un grid */
+    grid-column-start: 2; 
+    grid-column-end: 3;                        /* para darle la cantidad de columnas a abarcar */
+}  
+.lista-footer:nth-child(3) {                    /* se usa para seleccionar un elemento de un grid */
+    grid-column-start: 3; 
+    grid-column-end: 4;                        /* para darle la cantidad de columnas a abarcar */
+}  
+.lista-footer:nth-child(4) {                    /* se usa para seleccionar un elemento de un grid */
+    grid-column-start: 1; 
+    grid-column-end: 4;   
+    text-align: center;                     /* para darle la cantidad de columnas a abarcar */
+}  
