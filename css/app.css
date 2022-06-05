@@ -47,16 +47,19 @@ img {
     font-weight: 900;
     padding: 1rem;
     transition: background-color .3s ease-out;
+    text-align: center;
 }
 .btn:hover {
     background-color: #769c02;
 }
 
 
-
 /* Utilidades */
 .text-center {
     text-align: center;
+}
+.max-width-30 {
+    max-width:30rem;
 }
 
 
@@ -159,23 +162,23 @@ img {
 .producto:nth-child(3) img{
     height: 30rem;
     width: 100%;
-    object-fit: cover;  /*se usa para posicionar una imagen dentro del contenedor */
+    object-fit: cover;  
 }
-.producto:nth-child(3) {                    /* se usa para seleccionar un elemento de un grid */
+.producto:nth-child(3) {                  
     grid-column-start: 4; 
-    grid-column-end: 7;                        /* para darle la cantidad de columnas a abarcar */
+    grid-column-end: 7;                      
 }  
-.producto:nth-child(4) {                    /* se usa para seleccionar un elemento de un grid */
+.producto:nth-child(4) {                 
     grid-column-start: 1; 
-    grid-column-end: 3;                        /* para darle la cantidad de columnas a abarcar */
+    grid-column-end: 3;                      
 }  
-.producto:nth-child(5) {                    /* se usa para seleccionar un elemento de un grid */
+.producto:nth-child(5) {                   
     grid-column-start: 3; 
-    grid-column-end: 5;                        /* para darle la cantidad de columnas a abarcar */
+    grid-column-end: 5;                       
 }  
-.producto:nth-child(6) {                    /* se usa para seleccionar un elemento de un grid */
+.producto:nth-child(6) {            
     grid-column-start: 5; 
-    grid-column-end: 7;                        /* para darle la cantidad de columnas a abarcar */
+    grid-column-end: 7;                        
 }  
 .producto {
     background-color: #037bc0;
@@ -198,29 +201,63 @@ img {
 
 
 /* Footer */
-footer {
+.site-footer {
+    border-top: 1px solid #e1e1e1;
+    margin-top: 5rem;
+    padding-top: 5rem;
+}
+.site-footer h3 {
+    margin-bottom: .5rem;
+}
+.grid-footer {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 2rem;
-} 
-footer .navegacion {
-    display: flex;
-    flex-direction: column;            /* Alinear Filas y Columnas */ 
 }
-.lista-footer:nth-child(1) {                    /* se usa para seleccionar un elemento de un grid */
-    grid-column-start: 1; 
-    grid-column-end: 2;                        /* para darle la cantidad de columnas a abarcar */
-}  
-.lista-footer:nth-child(2) {                    /* se usa para seleccionar un elemento de un grid */
-    grid-column-start: 2; 
-    grid-column-end: 3;                        /* para darle la cantidad de columnas a abarcar */
-}  
-.lista-footer:nth-child(3) {                    /* se usa para seleccionar un elemento de un grid */
-    grid-column-start: 3; 
-    grid-column-end: 4;                        /* para darle la cantidad de columnas a abarcar */
-}  
-.lista-footer:nth-child(4) {                    /* se usa para seleccionar un elemento de un grid */
-    grid-column-start: 1; 
-    grid-column-end: 4;   
-    text-align: center;                     /* para darle la cantidad de columnas a abarcar */
-}  
+.footer-menu a {
+    display: block;  /* Para bloquear la linea de des links */
+}
+.copyright {
+    margin-top: .5rem;
+    text-align: center;
+}
+
+
+/* Nosotros */
+.contenido-nosotros {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    grid-template-columns: repeat(auto-fit, minmax( 25rem, 1fr ));
+    column-gap: 4rem;
+}
+.informacion-nosotros {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+
+/* Blog */
+.contenedor-blog {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    column-gap: 4rem;
+}
+.entrada {
+    border-bottom: 2px solid #e1e1e1;
+    padding-bottom: 4rem;
+    margin-bottom: 2rem;
+}
+.entrada:last-of-type {       /* last of time: Seleccionar La ultima de varias con el mismo nombre.*/
+    border: none;
+}
+.entrada-meta {
+    display: flex;
+    justify-content: space-between;
+}
+.entrada-meta p {
+    font-weight: bold;
+}
+.entrada-meta span {
+    color: #037bc0;
+}
